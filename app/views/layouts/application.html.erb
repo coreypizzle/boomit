@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TitanStatus</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+  <script type="text/javascript" src="//use.typekit.net/yfm1smh.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+<div class="container" id="top">
+  <header class="nav nuvo">
+    <div class="float-left"><%= image_tag 'logo.png', :class => 'logo1' %></div>
+    <%= link_to 'home', root_path %> <% if user_signed_in? %>- <%= link_to 'Edit Profile', '/users/edit' %><% end %>
+    <% if user_signed_in? %> - 
+      <%= link_to 'boomboard', dashboard_path(current_user.id) %>
+    <% end %>
+    
+		<div class="float-right">
+			<% if user_signed_in? %>
+     			Hi, <%= current_user.username %> - 
+    			 <%= link_to 'Log Out', destroy_user_session_path, :method => :delete %>
+ 			<% else %>
+ 				<%= form_for("user", :url => user_session_path) do |f| %>
+  					<%= f.text_field :username, :class => 'login-form', :placeholder => 'Username' %>
+  					<%= f.text_field :email, :class => 'login-form', :placeholder => 'Email' %>
+  					<%= f.password_field :password, :class => 'login-form', :placeholder => 'Password' %>
+  					<%= f.submit 'Log in' %>
+			<% end %>		
+ 			<% end %>
+		</div>
+	</header>
+
+	
+<div class="marg">
+<%= yield %>
+</div>
+</div>
+</body>
+</html>

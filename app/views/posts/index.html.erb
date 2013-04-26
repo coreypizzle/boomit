@@ -1,0 +1,48 @@
+
+
+<% if user_signed_in? %>
+  <h1 id="welcome" class="nuvo">Welcome <%= current_user.username %>!</h1>
+<% else %>
+  <h1 id="welcome" class="nuvo">Log-In to make some posts!</h1>
+<% end%>
+
+<div class="follow-row">
+  <div class="titan-users nuvo"><h2>BoomIt Users</h2></div>
+  <div class="user-row nuvo"><%= link_to 'coreypizzle', user_path(1) %> - <%= link_to 'BoomBoard', dashboard_path(1) %></div>
+    <% @users.each do |user| %>
+      <div class="user-row nuvo"><%= link_to user.username, user_path(user.id) %> - <%= link_to 'BoomBoard', dashboard_path(user.id) %></div>
+    <% end %>
+</div>
+
+<div class="statuses">
+  <% if user_signed_in? %><div class="status-form"><%= render 'form' %></div><% end %>
+  <% if user_signed_in? %>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="tstamp">
+        <%= image_tag avatar_url_small(post.user), :class => 'gravatar' %>
+        <strong>Posted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.username %></strong>
+      </div>
+      <div class="status"><%= post.status %></div>
+      <div class="likearea"><%= link_to 'BoomThis', 'posts/like', :class => 'wtxt nuvo' %> - <%= @likes_num %></div>
+    </div>
+  <% end %>
+  <% else %>
+    <% @posts_not_signed_in.each do |post| %>
+    <div class="post">
+      <div class="tstamp">
+        <%= image_tag avatar_url_small(post.user), :class => 'gravatar' %>
+        <strong>Posted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.username %></strong>
+      </div>
+      <div class="status"><%= post.status %></div>
+    </div>
+  <% end %>
+  <% end %>
+</div>
+
+
+
+
+
+
+

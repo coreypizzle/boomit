@@ -1,0 +1,13 @@
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  
+  <%= f.text_field :username, :class => 'login-form' %>
+
+  <%= f.email_field :email, :autofocus => true, :class => 'login-form' %>
+
+  <%= f.password_field :password, :class => 'login-form' %>
+
+  <%= f.submit "Log In", :class => 'whitetxt nobutt nuvo' %> or 
+  <%= link_to "Sign Up", new_user_registration_path, :class => 'whitetxt nobutt nuvo' %>
+<% end %>
+

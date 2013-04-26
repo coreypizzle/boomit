@@ -1,0 +1,13 @@
+
+<% if user_signed_in? %>
+<h1 id="welcome" class="nuvo">Welcome <%= current_user.username %>!</h1>
+
+<div class="follow-row">
+	<div class="titan-users nuvo"><h2>TITAN Users</h2></div>
+</div>
+
+<div class="statuses">
+
+</div>
+
+<% end %>

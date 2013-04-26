@@ -1,0 +1,294 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	font-family: arial;
+	margin: 0;
+	height: auto;
+	background: url(image_path('bgptwh.png'));
+}
+
+.typekit-badge {
+	display: none!important;
+}
+
+.container {
+	width: 100%;
+	height: 1200px;
+}
+
+.logo1 {
+	margin: 5px 15px 0 10px;
+}
+
+.nuvo {
+	color: #f23030;
+}
+
+#welcome {
+	color: #f23030;
+}
+
+
+header {
+background: #f23030; /* Old browsers */
+background: -moz-linear-gradient(top,  #f23030 0%, #d10000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f23030), color-stop(100%,#d10000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f23030 0%,#d10000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f23030 0%,#d10000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f23030 0%,#d10000 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f23030 0%,#d10000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f23030', endColorstr='#d10000',GradientType=0 ); /* IE6-9 */
+
+	margin-bottom: 25px; 
+	width: 100%;
+	height: 43px;
+	line-height: 43px;
+	color: white!important;
+}
+
+.logo {
+	margin: 11px auto 0 auto;
+	display: block;
+}
+
+.nav-links {
+}
+
+.typekit-badge {
+	display: none;
+}
+
+header a:link {
+	color: white;
+	text-decoration: none;
+}
+
+header a:visited {
+	color: white;
+	text-decoration: none;
+	
+}
+
+header a:hover {
+	color: white;
+	text-decoration: none;
+	
+}
+
+header a:active {
+	color: white;
+	text-decoration: none;
+	
+}
+
+a:link {
+	color: black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+	text-decoration: none;
+	
+}
+
+a:hover {
+	color: black;
+	text-decoration: none;
+	
+}
+
+a:active {
+	color: black;
+	text-decoration: none;
+	
+}
+
+.float-right {
+	float: right;
+	margin-right: 15px; 
+}
+
+.float-left {
+	float: left;
+	margin-left: 15px; 
+	height: 100%;
+}
+
+.follow-row {
+	width: 25%;
+	height: auto;
+	min-height: 1000px;
+	border-radius: 5px;
+	border: 1px black solid;
+	background-color: white;
+	float: left;
+	position: absolute;
+}
+
+.statuses {
+	width: 65%;
+	height: auto;
+	min-height: 1000px;
+	float: right;
+	border-radius: 5px;
+}
+
+.marg {
+	margin: 0 auto 0 auto;	
+	width: 80%;
+	height: 100%;
+}
+
+.titan-users {
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px black solid;
+	text-align: center;
+	color: white;
+	background-color: #f23030;
+	margin-top: -20px;
+}
+
+.user-container {
+	height: 90px;
+	width: 100%;
+
+}
+
+.titan {
+	letter-spacing: -3px;
+}
+
+.whitetxt {
+	color: white;
+}
+
+.nobutt {
+	background:none;
+	border:0;
+	color: white;
+	font-size: 15pt;
+	font-weight: bold;
+}
+
+.rtxt {
+	color: red!important;
+}
+
+.login-form {
+	border-radius: 2px;
+	padding: 1px 1px;
+	border: none;
+	transition: text-shadow 3s;
+	-moz-transition: text-shadow 3s; /* Firefox 4 */
+	-webkit-transition: text-shadow 3s; /* Safari and Chrome */
+	-o-transition: text-shadow 3s; /* Opera */
+}
+
+.login-form:hover {
+	box-shadow: 0 0 10px #FFF;
+}
+
+.btclear {
+	border: none;
+}
+
+.well {
+	margin: 15px 0 0 0;
+	background-color: #FAFAFA;
+	border-radius: 10px;
+	border: 1px black inset;
+}
+
+.profile-edit {
+	color: white!important;
+	width: 80%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+		background: #f23030; /* Old browsers */
+background: -moz-linear-gradient(top,  #f23030 0%, #d10000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f23030), color-stop(100%,#d10000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f23030 0%,#d10000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f23030 0%,#d10000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f23030 0%,#d10000 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f23030 0%,#d10000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f23030', endColorstr='#d10000',GradientType=0 ); /* IE6-9 */
+}
+
+.blue {
+	color: #399ae5!important;
+}
+
+.nobutt .nuvo .blue {
+	font-size: 30px;
+}
+
+.bio-field {
+
+}
+
+.gravatar {
+	border-radius: 200px;
+	position: absolute;
+}
+
+.gravatar-pos-fix {
+	border-radius: 200px;
+}
+
+.gr-dash-mar-top {
+	margin-top: 15px;
+}
+
+.grav-hello {
+	line-height: 200px;
+	width: auto;
+	text-indent: 250px;
+}
+
+.profile-bio {
+	width: 50%;
+	height: auto;
+	line-height: 30px;
+	background-color: #F2F2F2;
+	border: 1px black solid;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.blue-bg {
+	background-color: #f23030;
+}
+
+.dash-well {
+	width: 80%;
+	height: 380px;
+	background-image: url(image_path('dashbg.jpg'));
+}
+
+.box-shadow {
+	box-shadow: 1px 1px 5px #000;
+}
+
+.wtxt {
+	color: white!important;
+}
+
+.profile-edit-inner {
+	width: 250px;
+	margin: 0 auto 0 auto;
+	height: 100%;
+	background-color: #f23030;
+}
+
+.likearea {
+	width: 100%;
+	color: white!important;
+	background-color: red;
+	border-top: 1px black solid;
+}

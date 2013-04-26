@@ -1,0 +1,25 @@
+<div class="well profile-edit">
+<h2 class="nuvo wtxt">Edit your <%= resource_name.to_s.humanize %> Profile</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <h3><%= f.label :bio, :class => 'nuvo wtx' %></h3>
+  <%= f.text_area :bio, :rows => "15", :cols => "80", :class => 'bio-field' %></br></br>
+  <h3><%= f.label :motto, :class => 'nuvo wtxt' %></h3>
+  <%= f.text_field :motto, :placeholder => 'Keep it nice & short!' %></br></br>
+  <h3><%= f.label :website, :class => 'nuvo wtxt' %></h3>
+  <%= f.text_field :website, :placeholder => 'Your website' %></br></br>
+  <h3><%= f.label :skype, :class => 'nuvo wtxt' %></h3>
+  <%= f.text_field :skype, :placeholder => 'Skype Name' %></br></br>
+  <h3 class=""><%= f.label 'Age', :class => 'nuvo wtxt' %></h3>
+  <%= f.text_field :age, :placeholder => 'Age goes here!' %>
+
+  <div><h3 class=""><%= f.label :current_password, :class => 'nuvo wtxt' %><br /></h3>
+  <%= f.password_field :current_password %></div>
+
+  <div><h1><%= f.submit "Save Changes", :class => 'nuvo wtxt blue-bg btclear' %></h1></div>
+<% end %>
+
+<p><%= button_to "Shut Down My Account!", registration_path(resource_name), :data => { :confirm => "No! Please stay with us!" }, :method => :delete, :class => 'btclear blue-bg wtxt nuvo' %></p>
+</div>

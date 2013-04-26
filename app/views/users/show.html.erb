@@ -1,0 +1,10 @@
+<div class="grav-hello">
+	<%= image_tag avatar_url(@user), :class => 'gravatar' %>
+	<h1 class="nuvo">Hi, I'm <%= @user.username %>!</h1>
+</div>
+
+<div class="profile-bio nuvo whitetxt blue-bg"><%= @user.bio %></div>
+</br>
+<div class="nuvo"><h2>My Website - <%= @user.website %></h2></div>
+<div class="nuvo"><h2>My Skype Name - <%= @user.skype %></h2></div>
+<div class="nuvo"><h2>My Age - <%= @user.age %></h2></div>
