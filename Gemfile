@@ -9,8 +9,6 @@ gem 'gravatar_image_tag'
 
 gem 'gravatarify', '~> 3.0.0'
 
-gem 'sqlite3'
-
 gem 'pg'
 
 gem 'acts_as_votable', '~> 0.5.0'
