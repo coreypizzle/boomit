@@ -24,7 +24,7 @@
         <strong>Posted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.username %></strong>
       </div>
       <div class="status"><%= post.status %></div>
-      <div class="likearea"><%= link_to 'BoomThis', 'posts/like', :class => 'wtxt nuvo' %> - <%= @likes_num %></div>
+      <div class="likearea"><%= link_to 'BoomThis', 'posts/like', :class => 'wtxt nuvo' %> - <%= post.likes.count %></div>
     </div>
   <% end %>
   <% else %>

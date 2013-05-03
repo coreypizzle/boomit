@@ -9,20 +9,21 @@ gem 'gravatar_image_tag'
 
 gem 'gravatarify', '~> 3.0.0'
 
-gem 'sqlite3-ruby'
+gem 'sqlite3'
 
-group :production do 
-  gem 'pg'
-end
+gem 'pg'
 
 gem 'acts_as_votable', '~> 0.5.0'
 
 gem "socialization"
-
-
+	
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.
+
+
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
