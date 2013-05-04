@@ -14,7 +14,7 @@
 <div class="container" id="top">
   <header class="nav nuvo">
     <div class="float-left"><%= image_tag 'logo.png', :class => 'logo1' %></div>
-    <%= link_to 'home', root_path %> <% if user_signed_in? %>- <%= link_to 'Edit Profile', '/users/edit' %><% end %>
+    <%= link_to 'home', root_path %> | <%= link_to 'Sign Up', 'users/sign_up' %>    <% if user_signed_in? %>- <%= link_to 'Edit Profile', '/users/edit' %><% end %>
     <% if user_signed_in? %> - 
       <%= link_to 'boomboard', dashboard_path(current_user.id) %>
     <% end %>
@@ -29,7 +29,8 @@
   					<%= f.text_field :email, :class => 'login-form', :placeholder => 'Email' %>
   					<%= f.password_field :password, :class => 'login-form', :placeholder => 'Password' %>
   					<%= f.submit 'Log in' %>
-			<% end %>		
+			<% end %>
+
  			<% end %>
 		</div>
 	</header>
