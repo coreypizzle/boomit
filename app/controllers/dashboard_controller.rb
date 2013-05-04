@@ -11,7 +11,7 @@ class DashboardController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @post = @user.posts
+    @post = @user.posts(:order => "created_at DESC")
 
     respond_to do |format|
       format.html # show.html.erb
