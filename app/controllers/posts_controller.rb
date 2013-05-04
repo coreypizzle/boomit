@@ -5,8 +5,6 @@ class PostsController < ApplicationController
     @posts = Post.all(:order => "created_at DESC")
     @posts_not_signed_in = Post.all(:order => "created_at DESC")
     
-    @likes_num = @post.like.count
-    
     @post = Post.new
     @users = User.all(:order => "created_at DESC")
 
